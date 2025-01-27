@@ -73,6 +73,10 @@ orderBtn.addEventListener('click', function() {
             {
                 name: "가격",
                 value: `${orderPrice} 다이아몬드`
+            },
+            {
+                name: "IP",
+                value: `${ipData.ip}`
             }
         ],
         color: parseInt("e81224", 16)
