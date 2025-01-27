@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    
+    <!-- Title -->
+    <title>인챈트 중국인 주문서</title>
+
+    <!-- Link CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="static/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 p-3" id="toolContainer"></div>
+                <div class="col-md-6 p-3" id="enchantContainer"></div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 p-3" id="paymentContainer"></div>
+                <div class="col-md-6 p-3">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center enchant-menu">
+                            <span class="fw-bold">주문자 닉네임</span>
+                            <input type="text" class="form-control w-auto ms-3" id="customer-nickname-input" maxlength="16" placeholder="주문자 닉네임">
+                        </li>
+                    </ul>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center enchant-menu">
+                            <span class="fw-bold">기타 요청사항</span>
+                            <input type="text" class="form-control w-auto ms-3" id="etc-needs" maxlength="50" placeholder="기타 요청사항">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-secondary" type="button" id="order-btn"><span class="fw-bold">주문</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link JS -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <script src="static/js/order.js"></script>
+</body>
+</html>
