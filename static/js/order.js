@@ -82,7 +82,7 @@ orderBtn.addEventListener('click', function() {
     })
     .then(response => {
         if (response.ok) {
-            console.log("Order Placed");
+            window.location.href = '/order_placed.html';
         } else {
             console.error("Error");
         }
