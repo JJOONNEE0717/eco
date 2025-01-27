@@ -1,0 +1,77 @@
+/* Body */
+body {
+    font-family: sans-serif;
+}
+
+/* Elements */
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tool-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.enchant-menu {
+    margin-bottom: 10px;
+}
+
+.enchant-menu {
+    font-size: 1.1rem;
+    border-radius: 0.375rem;
+    padding: 10px 15px;
+}
+
+.form-control {
+    width: 80px;
+}
+
+.item-icon {
+    height: 30px;
+    width: 30px;
+}
+
+#enchantContainer {
+    max-height: 450px;
+    min-height: 450px;
+    overflow-y: auto;
+}
+
+.notification-message {
+    color: #595C5F;
+}
+
+#originalPriceDisplay {
+    text-decoration: line-through;
+    color: #DC3545;
+}
+
+.alertText {
+    color: #DC3545;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C7C8C9;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #8C8D8E;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 12px;
+}
