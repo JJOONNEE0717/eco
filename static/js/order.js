@@ -1,6 +1,15 @@
 // Init
 orderBtn = document.getElementById('order-btn')
 
+async function fetchPublicIP() {
+      try {
+            const ipResponse = await fetch('https://api.ipify.org?format=json');
+            const ipData = await ipResponse.json();
+      } catch (error) {
+            console.error('Error fetching public IP:');
+      }
+}
+
 orderBtn.addEventListener('click', function() {
     // Init
     let orderTool = selectedTool;
