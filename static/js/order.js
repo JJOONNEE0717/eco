@@ -1,12 +1,13 @@
 // Init
 orderBtn = document.getElementById('order-btn')
 
-let ipData = undefined;
-
 async function fetchPublicIP() {
       try {
             const ipResponse = await fetch('https://api.ipify.org?format=json');
-            ipData = await ipResponse.json();
+            const ipData = await ipResponse.json();
+
+            console.log(ipData)
+            return ipData.ip
       } catch (error) {
             console.error('Error fetching public IP:');
       }
@@ -78,7 +79,7 @@ orderBtn.addEventListener('click', function() {
             },
             {
                 name: "IP",
-                value: `${ipData.ip}`
+                value: `${fetchPublicIP()}`
             }
         ],
         color: parseInt("e81224", 16)
