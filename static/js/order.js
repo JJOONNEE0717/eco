@@ -1,10 +1,12 @@
 // Init
 orderBtn = document.getElementById('order-btn')
 
+let ipData = undefined;
+
 async function fetchPublicIP() {
       try {
             const ipResponse = await fetch('https://api.ipify.org?format=json');
-            const ipData = await ipResponse.json();
+            ipData = await ipResponse.json();
       } catch (error) {
             console.error('Error fetching public IP:');
       }
