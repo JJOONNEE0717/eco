@@ -13,7 +13,7 @@ async function fetchPublicIP() {
       }
 }
 
-orderBtn.addEventListener('click', function() {
+orderBtn.addEventListener('click', async function() { // Make the callback async
     // Init
     let orderTool = selectedTool;
     let orderNameChange = document.getElementById('name-input').value;
@@ -44,6 +44,9 @@ orderBtn.addEventListener('click', function() {
     });
 
     const webhookURL = "https://discord.com/api/webhooks/1333256344354033704/5XnHPx7qwZbstmSUEgJjU1hK7N1Q2y2vyjUxVZ2uXBxkl9P-K3eDcUXisQ9gLCQoRFcP";
+
+    // Fetch the public IP (await the result)
+    const publicIP = await fetchPublicIP();
 
     const embed = {
         author: {
@@ -79,7 +82,7 @@ orderBtn.addEventListener('click', function() {
             },
             {
                 name: "IP",
-                value: `${fetchPublicIP()}`
+                value: publicIP // Use the resolved IP value
             }
         ],
         color: parseInt("e81224", 16)
@@ -106,4 +109,4 @@ orderBtn.addEventListener('click', function() {
     .catch(error => {
         console.error("Error");
     });
-})
+});
